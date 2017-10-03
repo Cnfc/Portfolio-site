@@ -4,7 +4,7 @@ body {
   font-size: 14px;
   min-width: 320px;
   position: relative;
-  line-height: 1.42857;
+  line-height: 1.7;
   -webkit-font-smoothing: antialised;
   overflow-x: hidden;
   background-color: #181818;
@@ -308,35 +308,45 @@ img.mfp-img {
   right: 8px;
   padding: 0;
 }
-
 /*Magnific.css Zoom images*/
 /* magnific library opened */
-/*.mfp-zoom-out-cur .library {*/
-
-}
-
+/*.mfp-zoom-out-cur .library */
 /* overlay at start */
 /*.mfp-fade.mfp-bg {*/
-
-}
 /* overlay animate in */
 /*.mfp-fade.mfp-bg.mfp-ready {*/
-
-}
 /* overlay animate out */
 /*.mfp-fade.mfp-bg.mfp-removing {*/
-
-}
-
 /* content at start */
 /*.mfp-fade.mfp-wrap .mfp-content {*/
-
-}
 /* content animate it */
 /*.mfp-fade.mfp-wrap.mfp-ready .mfp-content {*/
-
-}
 /* content animate out */
 /*.mfp-fade.mfp-wrap.mfp-removing .mfp-content {*/
 
-}*/
+
+
+.inside{
+  background-color: #edf9ef;
+}
+.inside .content {
+  padding: 80px 10% 50px;
+}
+.content-header {
+  text-align: center;
+}
+.content-header img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 35px;
+}
+.content-header p {
+  letter-spacing: 3px;
+}
+.content_body {
+  margin-top: 35px;
+  font-style: 15px;
+  font-size: 18px;
+
+}

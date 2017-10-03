@@ -285,3 +285,58 @@ body textarea:required:valid {
   opacity: 1;
   border-color: tomato;
 }
+/*ZOOM*/
+/*.mfp-content {
+  width: 100%;
+}
+.mfp-container {
+  padding: 0;
+}
+img.mfp-img {
+  display: block;
+  height: auto;
+  max-height: none;
+  padding: 0;
+  width: 100%;
+}
+.mfp-figure button.mfp-close {
+  background-color: tomato;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  text-align: center;
+  right: 8px;
+  padding: 0;
+}
+
+/*Magnific.css Zoom images*/
+/* magnific library opened */
+/*.mfp-zoom-out-cur .library {*/
+
+}
+
+/* overlay at start */
+/*.mfp-fade.mfp-bg {*/
+
+}
+/* overlay animate in */
+/*.mfp-fade.mfp-bg.mfp-ready {*/
+
+}
+/* overlay animate out */
+/*.mfp-fade.mfp-bg.mfp-removing {*/
+
+}
+
+/* content at start */
+/*.mfp-fade.mfp-wrap .mfp-content {*/
+
+}
+/* content animate it */
+/*.mfp-fade.mfp-wrap.mfp-ready .mfp-content {*/
+
+}
+/* content animate out */
+/*.mfp-fade.mfp-wrap.mfp-removing .mfp-content {*/
+
+}*/

@@ -63,13 +63,13 @@ $(document).ready(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function() {
+	$("#callback").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
 			data: $(this).serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			alert("Thanks for your request!");
 			setTimeout(function() {
 
 			}, 1000);

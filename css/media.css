@@ -31,6 +31,9 @@
     height: 180px;
     margin-bottom: 20px;
   }
+  .form_contacts form {
+    padding: 15px;
+  }
 }
 
 /* Custom, iPhone Retina */

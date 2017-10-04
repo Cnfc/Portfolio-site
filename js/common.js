@@ -78,7 +78,7 @@ $(document).ready(function() {
 	});
 
 });
-
+//show pictures
 $(window).load(function() {
 
 	$(".loader_inner").fadeOut();

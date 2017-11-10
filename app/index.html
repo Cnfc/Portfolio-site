@@ -3,10 +3,18 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
-  <title>Clear View Escapes</title>
+  <title>Portfolio site</title>
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys thast inspire you to be you.">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon" />
+
+
+  <!-- SOme Add with npm -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/linea/styles.css" />
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
+
 
   <!-- build:css assets/styles/styles.css-->
   <link rel="stylesheet" href="temp/styles/styles.css">
@@ -17,35 +25,82 @@
   <!-- endbuild-->
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrapper">
-      <div class="site-header__logo">
-        <div class="site-header__logo__graphic icon icon--clear-view-escapes">Clear view escapes</div>
-      </div>
-      <div class="site-header__menu-icon">
-        <div class="site-header__menu-icon__middle"></div>
-      </div>
-      <div class="site-header__menu-content">
-        <div class="site-header__btn-container">
-          <a href="#" class="btn open-modal">Get in Touch</a>
-        </div>
-        <nav class="primary-nav primary-nav--pull-right">
-          <ul>
-            <li><a href="#our-beginning" id="our-beginning-link">Our Beginning</a></li>
-            <li><a href="#features" id="features-link">Features</a></li>
-            <li><a href="#testimonials" id="testimonials-link">Testimonials</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+
+	<aside class="left_side">
+
+		<div class="btn_mnu" title="Menu" >
+			<div class="btn_row"></div>
+			<div class="btn_row"></div>
+			<div class="btn_row"></div>
+		</div>
+
+		<div class="aside_content">
+			<div class="user_info">
+				<img src="img/photo.jpg" alt="Photo">
+				<h2>Name Autor</h2>
+				<p>Web developer</p>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="index.html">Portfolio</a></li>
+					<li><a href="about.html">About me</a></li>
+					<li><a href="contacts.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<div class="content gallery">
+		<a class="html" href="img/1.jpg"><img src="img/1.jpg" alt="Alt"></a>
+		<a class="js" href="img/2.jpg"><img src="img/2.jpg" alt="Alt"></a>
+		<a class="js" href="img/3.jpg"><img src="img/3.jpg" alt="Alt"></a>
+		<a class="html" href="img/4.jpg"><img src="img/4.jpg" alt="Alt"></a>
+		<a class="js" href="img/5.jpg"><img src="img/5.jpg" alt="Alt"></a>
+		<a href="img/6.jpg"><img src="img/6.jpg" alt="Alt"></a>
+		<a href="img/7.jpg"><img src="img/7.jpg" alt="Alt"></a>
+		<a class="js" href="img/8.jpg"><img src="img/8.jpg" alt="Alt"></a>
+		<a href="img/9.jpg"><img src="img/9.jpg" alt="Alt"></a>
+		<a class="html" href="img/10.jpg"><img src="img/10.jpg" alt="Alt"></a>
+		<a href="img/1.jpg"><img src="img/1.jpg" alt="Alt"></a>
+		<a class="js" href="img/2.jpg"><img src="img/2.jpg" alt="Alt"></a>
+		<a class="html" href="img/3.jpg"><img src="img/3.jpg" alt="Alt"></a>
+		<a href="img/4.jpg"><img src="img/4.jpg" alt="Alt"></a>
+		<a href="img/5.jpg"><img src="img/5.jpg" alt="Alt"></a>
+		<a href="img/6.jpg"><img src="img/6.jpg" alt="Alt"></a>
+		<a href="img/7.jpg"><img src="img/7.jpg" alt="Alt"></a>
+
+	</div>
+
+	<div class="filter_items">
+		<button class="filter_label active">All</button>
+		<button class="filter_label" data-filter=".html">HTML</button>
+		<button class="filter_label" data-filter=".js">JavaScript</button>
+</div>
+
+	<div class="hidden"></div>
+<!--
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div> -->
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
 
 
+	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/modernizr/modernizr.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="libs/freewall/freewall.js"></script>
+	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="libs/nicescroll/jquery.nicescroll.min.js"></script>
+	<!-- <script src="libs/lazyload/jquery.lazyload.min.js"></script> -->
 
-  <h2 class="Main">Это заголовок</h2>
- <p class="Main--par">Это параграф.</p>
- <p>Это другой параграф.</p>
- <button>Кликни меня</button>
+	<!-- <script src="js/common.js"></script> -->
 
   <!-- build:js assets/scripts/App.js-->
   <script src="./temp/scripts/App.js"></script>

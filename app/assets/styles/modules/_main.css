@@ -186,6 +186,9 @@ body textarea:required:valid {
   margin-top: -110px;
 
 }
+.aside_content li a:hover{
+  background: red;
+}
 
 .left_side.active .aside_content nav {
   margin-top: 35px;
@@ -227,7 +230,7 @@ body textarea:required:valid {
 	z-index: 9999;
 }
 .loader .loader_inner {
-	background-image: url("../../img/preloader.gif");
+	background-image: url("../../../assets/images/preloader.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-posirion: center center;

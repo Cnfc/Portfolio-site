@@ -689,6 +689,10 @@ body textarea:required:valid {
 
 }
 
+.aside_content li a:hover{
+  background: red;
+}
+
 .left_side.active .aside_content nav {
   margin-top: 35px;
 	transition: all .5s;
@@ -734,7 +738,7 @@ body textarea:required:valid {
 }
 
 .loader .loader_inner {
-	background-image: url("../../img/preloader.gif");
+	background-image: url("../../../assets/images/preloader.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-posirion: center center;
@@ -1047,14 +1051,11 @@ img.mfp-img {
   font-weight: normal;
 }
 
-.social-icons {
-  text-align: center;
-}
+/*text-align: center;*/
 
 .social-icons__icon {
   background-color: red;
-  display: inline-block;
-  margin: 0 5px 5px 5px;
+  display: inline-block;/*margin: 0 5px 5px 5px;*/
   width: 43%;
   height: 72px;
   position: relative;
@@ -1068,8 +1069,7 @@ img.mfp-img {
   }
 }
 
-.social-icons__icon .icon {
-  display: block;
+.social-icons__icon .icon {/*display: block;*/
   position: absolute;
   top: 50%;
   left: 50%;

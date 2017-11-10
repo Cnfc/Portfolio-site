@@ -1,0 +1,126 @@
+
+.left_side {
+  background-color: #111;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 10;
+  color: #fff;
+  overflow: hidden;
+  outline: none;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.left_side.active {
+  width: 300px;
+}
+
+
+.left_side.active .btn_mnu {
+  background-color: transparent;
+}
+
+.aside_content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  padding: 25px 0;
+}
+.user_info {
+  text-align: center;
+  opacity: 0;
+  white-space: nowrap;
+  -webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+
+.left_side.active .user_info{
+  opacity: 1;
+}
+.user_info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+  transition-delay: .5s;
+}
+
+.user_info h2 {
+  font-size: 20px;
+}
+
+.user_info p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #434343;
+
+}
+.aside_content nav {
+  margin: 35px 0;
+  position: relative;
+  z-index: 5;
+}
+.aside_content ul,
+.aside_content li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.aside_content li a {
+  color: #b2b2b2;
+  background-color: #111;
+  display: block;
+  padding: 10px 0px 10px 90px;
+  border-bottom: #212121 1px solid;
+  white-space: nowrap;
+  -webkit-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.aside_content li a:first-child{
+  border-top: #212121 1px solid;
+}
+.aside_content li a:hover {
+  text-decoration: none;
+  border-color: tomato;
+  color: #fff;
+
+}
+.left_side.active .aside_content li a::before {
+  margin-left: 20px;
+  /*text-indent: 5px;*/
+  -webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.left_side .aside_content nav {
+  margin-top: -110px;
+
+}
+.aside_content li a:hover{
+  background: red;
+}
+
+.left_side.active .aside_content nav {
+  margin-top: 35px;
+  -webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.aside_content li a::before {
+  display: inline-block;
+  font-family: "linea-basic-10";
+  font-size: 25px;
+  line-height: 0;
+  margin-left: -75px;
+  margin-top: -4px;
+  vertical-align: middle;
+  margin-right: 10px;
+}

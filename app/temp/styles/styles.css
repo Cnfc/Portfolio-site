@@ -499,13 +499,6 @@ a {
   margin-top: 0;
 }
 
-/*.Main {
-  color:red;
-  &--par {
-    color: blue;
-  }
-}*/
-
 body {
   font-family: "RalewayRegular", sans-serif;
   font-weight: normal;
@@ -529,22 +522,74 @@ body textarea:required:valid {
 .hidden {
   display: none; }
 
-.left_side {
-  background-color: #111;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  z-index: 10;
-  color: #fff;
-  overflow: hidden;
-  outline: none;
-  transition: all .5s;
+@font-face {
+  font-family: 'RalewayBold';
+  src: url('../../../assets/fonts./RalewayBold/RalewayBold/.eot');
+  src: url('../../../assets/fonts/RalewayBold/RalewayBold.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayBold/RalewayBold.woff') format('woff'),
+     url('../../../assets/fonts/RalewayBold/RalewayBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 
-.left_side.active {
-  width: 300px;
+@font-face {
+  font-family: 'RalewayLight';
+  src: url('../../../assets/fonts/RalewayLight/RalewayLight/.eot');
+  src: url('../../../assets/fonts/RalewayLight/RalewayLight.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayLight/RalewayLight.woff') format('woff'),
+     url('../../../assets/fonts/RalewayLight/RalewayLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular/.eot');
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.woff') format('woff'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular/.eot');
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.woff') format('woff'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('../../../assets/fonts/RobotoBold/RobotoBold/.eot');
+  src: url('../../../assets/fonts/RobotoBold/RobotoBold.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RobotoBold/RobotoBold.woff') format('woff'),
+     url('../../../assets/fonts/RobotoBold/RobotoBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('../../../assets/fonts/RobotoLight/RobotoLight/.eot');
+  src: url('../../../assets/fonts/RobotoLight/RobotoLight.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RobotoLight/RobotoLight.woff') format('woff'),
+     url('../../../assets/fonts/RobotoLight/RobotoLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('../../../assets/fonts/RobotoRegular/RobotoRegular/.eot');
+  src: url('../../../assets/fonts/RobotoRegular/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
+     url('../../../assets/fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 
 /* Button Menu*/
@@ -601,6 +646,48 @@ body textarea:required:valid {
 .btn_mnu {
   float: right;
 	transition: all .5s;
+}
+
+/*For each buttons*/
+
+.aside_content li:nth-child(1) a::before{
+  content: "\e026";
+}
+
+.aside_content li:nth-child(2) a::before{
+  content: "{";
+}
+
+.aside_content li:nth-child(3) a::before{
+  content: "R";
+}
+
+.button {
+  background-color: tomato;
+  border: medium none;
+  display: block;
+  line-height: 45px;
+  padding: 0 20px;
+  /*text-indent: 30px;*/
+  margin: 20px auto 10px;
+}
+
+.left_side {
+  background-color: #111;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 10;
+  color: #fff;
+  overflow: hidden;
+  outline: none;
+  transition: all .5s;
+}
+
+.left_side.active {
+  width: 300px;
 }
 
 .left_side.active .btn_mnu {
@@ -709,51 +796,6 @@ body textarea:required:valid {
   margin-right: 10px;
 }
 
-/*For each buttons*/
-
-.aside_content li:nth-child(1) a::before{
-  content: "\e026";
-}
-
-.aside_content li:nth-child(2) a::before{
-  content: "{";
-}
-
-.aside_content li:nth-child(3) a::before{
-  content: "R";
-}
-
-/*Preloder*/
-
-.loader {
-	background: none repeat scroll 0 0 #ffffff;
-	bottom: 0;
-	height: 100%;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 100%;
-	z-index: 9999;
-}
-
-.loader .loader_inner {
-	background-image: url("../../../assets/images/preloader.gif");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-posirion: center center;
-	background-color: #fff;
-	height: 60px;
-	width: 60px;
-	margin-top: -30px;
-	margin-left: -30px;
-	left: 50%;
-	top: 50%;
-	position: absolute;
-}
-
-/*Preloder*/
-
 .content {
   position: relative;
   margin: 5px 5px 55px 55px;
@@ -763,7 +805,7 @@ body textarea:required:valid {
 .gallery a {
   overflow: hidden;
   width: 388px;
-  padding: 5px;
+  padding: 5px 5px 5px 0;
   min-height: 110px;
   display: block;
 }
@@ -863,6 +905,40 @@ img.mfp-img {
 
 /*.mfp-fade.mfp-wrap.mfp-removing .mfp-content {*/
 
+.form_contacts form {
+  background-color: #181818;
+  color: #fff;
+  padding: 30px;
+}
+
+.callback h3 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form_contacts label {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #5b5b5b;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form_contacts input,
+.form_contacts textarea {
+  background-color: #2e2e2e;
+  border: tomato 1px solid;
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  max-width: 100%;
+
+}
+
 .inside{
   background-color: #edf9ef;
 }
@@ -935,121 +1011,36 @@ img.mfp-img {
   text-decoration: underline;
 }
 
-.form_contacts form {
-  background-color: #181818;
-  color: #fff;
-  padding: 30px;
+/*Preloder*/
+
+.loader {
+	background: none repeat scroll 0 0 #ffffff;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
 }
 
-.callback h3 {
-  margin-top: 0;
-  text-align: center;
-  margin-bottom: 25px;
+.loader .loader_inner {
+	background-image: url("../../../assets/images/preloader.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-posirion: center center;
+	background-color: #fff;
+	height: 60px;
+	width: 60px;
+	margin-top: -30px;
+	margin-left: -30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
 }
 
-.form_contacts label {
-  font-size: 20px;
-  letter-spacing: 3px;
-  color: #5b5b5b;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.form_contacts input,
-.form_contacts textarea {
-  background-color: #2e2e2e;
-  border: tomato 1px solid;
-  color: #fff;
-  display: block;
-  margin-top: 5px;
-  padding: 10px;
-  width: 100%;
-  font-size: 15px;
-  max-width: 100%;
-
-}
-
-.button {
-  background-color: tomato;
-  border: medium none;
-  display: block;
-  line-height: 45px;
-  padding: 0 20px;
-  /*text-indent: 30px;*/
-  margin: 20px auto 10px;
-}
-
-/*ul_contacts*/
-
-@font-face {
-  font-family: 'RalewayBold';
-  src: url('../../../assets/fonts./RalewayBold/RalewayBold/.eot');
-  src: url('../../../assets/fonts/RalewayBold/RalewayBold.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RalewayBold/RalewayBold.woff') format('woff'),
-     url('../../../assets/fonts/RalewayBold/RalewayBold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'RalewayLight';
-  src: url('../../../assets/fonts/RalewayLight/RalewayLight/.eot');
-  src: url('../../../assets/fonts/RalewayLight/RalewayLight.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RalewayLight/RalewayLight.woff') format('woff'),
-     url('../../../assets/fonts/RalewayLight/RalewayLight.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'RalewayRegular';
-  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular/.eot');
-  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RalewayRegular/RalewayRegular.woff') format('woff'),
-     url('../../../assets/fonts/RalewayRegular/RalewayRegular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'RalewayRegular';
-  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular/.eot');
-  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RalewayRegular/RalewayRegular.woff') format('woff'),
-     url('../../../assets/fonts/RalewayRegular/RalewayRegular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'RobotoBold';
-  src: url('../../../assets/fonts/RobotoBold/RobotoBold/.eot');
-  src: url('../../../assets/fonts/RobotoBold/RobotoBold.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RobotoBold/RobotoBold.woff') format('woff'),
-     url('../../../assets/fonts/RobotoBold/RobotoBold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'RobotoLight';
-  src: url('../../../assets/fonts/RobotoLight/RobotoLight/.eot');
-  src: url('../../../assets/fonts/RobotoLight/RobotoLight.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RobotoLight/RobotoLight.woff') format('woff'),
-     url('../../../assets/fonts/RobotoLight/RobotoLight.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'RobotoRegular';
-  src: url('../../../assets/fonts/RobotoRegular/RobotoRegular/.eot');
-  src: url('../../../assets/fonts/RobotoRegular/RobotoRegular.eot?#iefix') format('embedded-opentype'),
-     url('../../../assets/fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
-     url('../../../assets/fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
+/*Preloder*/
 
 /*text-align: center;*/
 

@@ -5,5 +5,11 @@
 @import "modules/_headline";
 @import "modules/_main";
 @import "modules/_fonts";
+@import "modules/_button";
+@import "modules/_asideleft";
+@import "modules/_content";
+@import "modules/_contact-form";
+@import "modules/_inside";
+@import "modules/_preloader";
 @import "modules/_social-icons";
 @import "modules/_sprite";

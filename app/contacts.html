@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru" class="no-js"> <!--<![endif]-->
 
+<html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio site</title>
+  <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
+  <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys thast inspire you to be you.">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon" />
 
-	<meta charset="utf-8" />
 
-	<title>Заголовок</title>
-	<meta content="" name="description" />
-
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+  <!-- SOme Add with npm -->
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="libs/linea/styles.css" />
 	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
+  <link rel="stylesheet" href="../assets/fonts.css" />
 
-	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/media.css" />
+  <!-- build:css assets/styles/styles.css-->
+  <link rel="stylesheet" href="temp/styles/styles.css">
+  <!-- endbuild -->
 
+  <!-- build:js assets/scripts/Vendor.js-->
+  <script src="/temp/scripts/Vendor.js"></script>
+  <!-- endbuild-->
 </head>
-
 <body class="inside">
 
 	<aside class="left_side">
@@ -37,7 +36,7 @@
 
 		<div class="aside_content">
 			<div class="user_info">
-				<img src="img/photo.jpg" alt="Photo">
+				<img src="assets/images/photo.jpg" alt="Photo">
 				<h2> Дашков Станислав</h2>
 				<p>Web developer</p>
 			</div>
@@ -112,25 +111,15 @@
 		</div>
 
 	</div>
-	</div>
-
-
-
-
-
 </div>
+
 
 	<div class="hidden"></div>
 
 	<div class="loader">
 		<div class="loader_inner"></div>
 	</div>
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
+
 
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
 	<script src="libs/modernizr/modernizr.js"></script>
@@ -140,7 +129,13 @@
 	<script src="libs/nicescroll/jquery.nicescroll.min.js"></script>
 	<!-- <script src="libs/lazyload/jquery.lazyload.min.js"></script> -->
 
-	<script src="js/common.js"></script>
+	<!-- <script src="js/common.js"></script> -->
 
+  <!-- build:js assets/scripts/App.js-->
+  <script src="./temp/scripts/App.js"></script>
+  <!-- endbuild-->
 </body>
+</html>
+
+
 </html>

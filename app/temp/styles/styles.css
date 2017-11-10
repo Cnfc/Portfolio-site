@@ -975,3 +975,73 @@ img.mfp-img {
 }
 
 /*ul_contacts*/
+
+@font-face {
+  font-family: 'RalewayBold';
+  src: url('../../../assets/fonts./RalewayBold/RalewayBold/.eot');
+  src: url('../../../assets/fonts/RalewayBold/RalewayBold.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayBold/RalewayBold.woff') format('woff'),
+     url('../../../assets/fonts/RalewayBold/RalewayBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RalewayLight';
+  src: url('../../../assets/fonts/RalewayLight/RalewayLight/.eot');
+  src: url('../../../assets/fonts/RalewayLight/RalewayLight.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayLight/RalewayLight.woff') format('woff'),
+     url('../../../assets/fonts/RalewayLight/RalewayLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular/.eot');
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.woff') format('woff'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular/.eot');
+  src: url('../../../assets/fonts/RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.woff') format('woff'),
+     url('../../../assets/fonts/RalewayRegular/RalewayRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('../../../assets/fonts/RobotoBold/RobotoBold/.eot');
+  src: url('../../../assets/fonts/RobotoBold/RobotoBold.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RobotoBold/RobotoBold.woff') format('woff'),
+     url('../../../assets/fonts/RobotoBold/RobotoBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('../../../assets/fonts/RobotoLight/RobotoLight/.eot');
+  src: url('../../../assets/fonts/RobotoLight/RobotoLight.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RobotoLight/RobotoLight.woff') format('woff'),
+     url('../../../assets/fonts/RobotoLight/RobotoLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('../../../assets/fonts/RobotoRegular/RobotoRegular/.eot');
+  src: url('../../../assets/fonts/RobotoRegular/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
+     url('../../../assets/fonts/RobotoRegular/RobotoRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

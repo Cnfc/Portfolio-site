@@ -130,27 +130,9 @@
 .aside_content li:nth-child(3) a::before{
   content: "R";
 }
-.aside_content li:nth-child(4) a::before{
-  content: "R";
-}
-.aside_content li:nth-child(5) a::before{
-  content: "R";
-}
-.aside_content li:nth-child(6) a::before{
-  content: "R";
-}
 
 .emp{
-  padding-bottom: 140px;
-  /*@mi {
-    padding-bottom: 400px;
-
-    }*/
-  @mixin atMedium{
-    padding-bottom: 160px;
-  }
-
-  @mixin atLarge {
-      padding-bottom: 400px;
-  }
+  padding-left: 70px;
+  padding-top: 40px;
+  /*padding-bottom: 180px;*/
 }

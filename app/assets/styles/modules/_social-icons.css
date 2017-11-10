@@ -5,7 +5,7 @@
   &__icon {
     background-color: red;
     display: inline-block;
-    /*margin: 0 5px 5px 5px;*/
+    margin: 0 5px 5px 5px;
     width: 43%;
     height: 72px;
     position: relative;
@@ -16,7 +16,7 @@
     }
 
     .icon {
-      /*display: block;*/
+      display: block;
       position: absolute;
       top: 50%;
       left: 50%;

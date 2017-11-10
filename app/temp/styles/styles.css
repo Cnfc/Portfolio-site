@@ -795,39 +795,10 @@ body textarea:required:valid {
   content: "R";
 }
 
-.aside_content li:nth-child(4) a::before{
-  content: "R";
-}
-
-.aside_content li:nth-child(5) a::before{
-  content: "R";
-}
-
-.aside_content li:nth-child(6) a::before{
-  content: "R";
-}
-
 .emp{
-  padding-bottom: 140px;
-}
-
-/*@mi {
-    padding-bottom: 400px;
-
-    }*/
-
-@media (min-width: 800px) {
-
-  .emp {
-    padding-bottom: 160px;
-  }
-}
-
-@media (min-width: 1400px) {
-
-  .emp {
-    padding-bottom: 400px;
-  }
+  padding-left: 70px;
+  padding-top: 40px;
+  /*padding-bottom: 180px;*/
 }
 
 .content {
@@ -1080,7 +1051,8 @@ img.mfp-img {
 
 .social-icons__icon {
   background-color: red;
-  display: inline-block;/*margin: 0 5px 5px 5px;*/
+  display: inline-block;
+  margin: 0 5px 5px 5px;
   width: 43%;
   height: 72px;
   position: relative;
@@ -1094,7 +1066,8 @@ img.mfp-img {
   }
 }
 
-.social-icons__icon .icon {/*display: block;*/
+.social-icons__icon .icon {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1107,11 +1080,11 @@ img.mfp-img {
 /* instead, please edit gulp/templates/sprite */
 
 .icon {
-      background-image: url('../../assets/images/sprites/sprite-e79e95cc.svg');
+      background-image: url('../../assets/images/sprites/sprite-e3607f81.svg');
     }
 
 .no-svg .icon {
-      background-image: url('../../assets/images/sprites/sprite-e79e95cc.png');
+      background-image: url('../../assets/images/sprites/sprite-e3607f81.png');
     }
 
 .icon--clear-view-escapes {
@@ -1123,65 +1096,77 @@ img.mfp-img {
 .icon--comment {
     width: 66px;
     height: 66px;
-    background-position: 99.71014492753623% 0;
+    background-position: 0 78.72222222222223%;
   }
 
 .icon--facebook {
     width: 23.23px;
     height: 44.01px;
-    background-position: 26.424310365536293% 45.92133741323979%;
+    background-position: 87.02485833643546% 47.86673188760258%;
   }
 
 .icon--fire {
     width: 58px;
     height: 66px;
-    background-position: 0 99.58035714285714%;
+    background-position: 0 37.98148148148148%;
+  }
+
+.icon--gh {
+    width: 34px;
+    height: 34px;
+    background-position: 0 99.75773195876289%;
+  }
+
+.icon--ghb {
+    width: 28px;
+    height: 28px;
+    background-position: 98.57805907172995% 44.035%;
   }
 
 .icon--globe {
     width: 66px;
     height: 66px;
-    background-position: 28.019323671497585% 99.58035714285714%;
+    background-position: 72.56281407035176% 0;
   }
 
 .icon--instagram {
     width: 44.01px;
     height: 44.01px;
-    background-position: 63.059522249879905% 49.25740726919919%;
+    background-position: 95.2079279605412% 23.946953638784716%;
   }
 
 .icon--mail {
     width: 66px;
     height: 50px;
-    background-position: 0 48.0703125%;
+    background-position: 72.56281407035176% 37.07865168539326%;
   }
 
 .icon--rain {
     width: 66px;
     height: 66px;
-    background-position: 99.71014492753623% 58.92857142857143%;
+    background-position: 33.165829145728644% 78.72222222222223%;
   }
 
 .icon--star {
     width: 66px;
     height: 66px;
-    background-position: 59.90338164251208% 99.58035714285714%;
+    background-position: 66.33165829145729% 78.72222222222223%;
   }
 
 .icon--twitter {
     width: 53.78px;
     height: 44.06px;
-    background-position: 94.15199343125627% 98.55159026429745%;
+    background-position: 99.61177918757693% 0;
   }
 
 .icon--wifi {
     width: 62px;
     height: 66px;
-    background-position: 68.43601895734596% 0;
+    background-position: 28.571428571428573% 37.98148148148148%;
   }
 
 .icon--youtube {
     width: 36.75px;
     height: 44px;
-    background-position: 37.76931216931217% 45.917910447761194%;
+    background-position: 92.17962760131435% 71.78260869565216%;
   }

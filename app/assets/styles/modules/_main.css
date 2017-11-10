@@ -248,8 +248,9 @@ body textarea:required:valid {
 }
 .gallery a {
   overflow: hidden;
-  width: 320px;
-  min-height: 50px;
+  width: 388px;
+  padding: 5px;
+  min-height: 110px;
   display: block;
 }
 .gallery img {

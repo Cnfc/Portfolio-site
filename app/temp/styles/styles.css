@@ -648,20 +648,6 @@ body textarea:required:valid {
 	transition: all .5s;
 }
 
-/*For each buttons*/
-
-.aside_content li:nth-child(1) a::before{
-  content: "\e026";
-}
-
-.aside_content li:nth-child(2) a::before{
-  content: "{";
-}
-
-.aside_content li:nth-child(3) a::before{
-  content: "R";
-}
-
 .button {
   background-color: tomato;
   border: medium none;
@@ -728,7 +714,6 @@ body textarea:required:valid {
   font-size: 12px;
   letter-spacing: 1px;
   color: #434343;
-
 }
 
 .aside_content nav {
@@ -794,6 +779,55 @@ body textarea:required:valid {
   margin-top: -4px;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+/*For each buttons*/
+
+.aside_content li:nth-child(1) a::before{
+  content: "\e026";
+}
+
+.aside_content li:nth-child(2) a::before{
+  content: "{";
+}
+
+.aside_content li:nth-child(3) a::before{
+  content: "R";
+}
+
+.aside_content li:nth-child(4) a::before{
+  content: "R";
+}
+
+.aside_content li:nth-child(5) a::before{
+  content: "R";
+}
+
+.aside_content li:nth-child(6) a::before{
+  content: "R";
+}
+
+.emp{
+  padding-bottom: 140px;
+}
+
+/*@mi {
+    padding-bottom: 400px;
+
+    }*/
+
+@media (min-width: 800px) {
+
+  .emp {
+    padding-bottom: 160px;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .emp {
+    padding-bottom: 400px;
+  }
 }
 
 .content {

@@ -14,16 +14,12 @@
   -o-transition: all .5s;
   transition: all .5s;
 }
-
 .left_side.active {
   width: 300px;
 }
-
-
 .left_side.active .btn_mnu {
   background-color: transparent;
 }
-
 .aside_content {
   position: absolute;
   top: 50px;
@@ -60,7 +56,6 @@
   font-size: 12px;
   letter-spacing: 1px;
   color: #434343;
-
 }
 .aside_content nav {
   margin: 35px 0;
@@ -123,4 +118,39 @@
   margin-top: -4px;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+/*For each buttons*/
+.aside_content li:nth-child(1) a::before{
+  content: "\e026";
+}
+.aside_content li:nth-child(2) a::before{
+  content: "{";
+}
+.aside_content li:nth-child(3) a::before{
+  content: "R";
+}
+.aside_content li:nth-child(4) a::before{
+  content: "R";
+}
+.aside_content li:nth-child(5) a::before{
+  content: "R";
+}
+.aside_content li:nth-child(6) a::before{
+  content: "R";
+}
+
+.emp{
+  padding-bottom: 140px;
+  /*@mi {
+    padding-bottom: 400px;
+
+    }*/
+  @mixin atMedium{
+    padding-bottom: 160px;
+  }
+
+  @mixin atLarge {
+      padding-bottom: 400px;
+  }
 }

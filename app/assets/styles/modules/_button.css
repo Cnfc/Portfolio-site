@@ -51,16 +51,6 @@
 	transition: all .5s;
 }
 
-/*For each buttons*/
-.aside_content li:nth-child(1) a::before{
-  content: "\e026";
-}
-.aside_content li:nth-child(2) a::before{
-  content: "{";
-}
-.aside_content li:nth-child(3) a::before{
-  content: "R";
-}
 
 .button {
   background-color: tomato;

@@ -1,1 +1,0 @@
-# our-lovely-course

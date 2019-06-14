@@ -1,8 +1,0 @@
-@import "normalize.css";
-/*@import "font-awesome-sprockets";*/
-/*@import "font-awesome";*/
-@import "base/_variables";
-@import "base/_mixins";
-@import "base/_global";
-@import "modules/_headline";
-@import "modules/_main";

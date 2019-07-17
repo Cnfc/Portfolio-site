@@ -26,7 +26,7 @@ const App2 = () => {
         <button className="menu-button" onClick={() => setNavOpen(!isNavOpen)}>
           Menu
         </button>
-        {/* <Nav style={navAnimation} /> */}
+        <Nav style={navAnimation} />
       </header>
       <main>
         <Toggle />

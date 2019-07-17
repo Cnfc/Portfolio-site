@@ -24,7 +24,6 @@ const Toggle = () => {
       key: 5
     }
   ]);
-  debugger;
 
   const transition = useTransition(items, item => item.key, {
     from: { opacity: 0 },

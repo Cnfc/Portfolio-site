@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { SAVE_COMMENT, FETCH_COMMENTS, CHANGE_AUTH } from "actions/types";
+import { SAVE_COMMENT, FETCH_COMMENTS, AUTH_USER } from "actions/types";
 
 export function saveComment(comment) {
   return {
@@ -18,9 +18,6 @@ export function fetchComments() {
   };
 }
 
-export function changeAuth(isLoggedIn) {
-  return {
-    type: CHANGE_AUTH,
-    payload: isLoggedIn
-  };
-}
+export const signUp = ({ email, password }) => dispatch => {
+  dispatch({ type: AUTH_USER });
+};

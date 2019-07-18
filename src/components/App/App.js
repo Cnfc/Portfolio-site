@@ -21,23 +21,22 @@ class App extends Component {
 
   renderHeader() {
     return (
-      <ul>
+      <ul className="page_container">
         <li>
           <Link to="/">Home</Link>
         </li>
-
         <li>
           <Link to="post">Post A Comment</Link>
         </li>
-
         <li>{this.renderButton()}</li>
+        <h3>Welcome to our Application</h3>
       </ul>
     );
   }
 
   render() {
     return (
-      <div className="page_container">
+      <div>
         {this.renderHeader()}
         <Route path="/post" component={CommentBox} />
         <Route path="/" exact component={CommentList} />

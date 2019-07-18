@@ -18,6 +18,13 @@
 body {
   /* background-color: #282c34; */
 }
+.page_container {
+  margin: 15px;
+  display: flex;
+}
+.page_container > li {
+  margin: 0 15px;
+}
 
 .App {
   text-align: center;
@@ -25,6 +32,13 @@ body {
 
 .logo {
   width: 200px;
+}
+
+.header_title {
+  display: flex;
+}
+.header_title a {
+  margin: 0 10px;
 }
 
 .App-header {

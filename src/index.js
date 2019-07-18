@@ -1,18 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Root from "Root";
 import App from "components/App/App";
+import Layout from "components/hoc/Layout";
+import Welcome from "components/App/Welcome";
+import SignUp from "components/auth/SignUp";
 
 import "components/index.css";
-import Main from "./components/App/Main";
 
 ReactDOM.render(
   <Root>
     <BrowserRouter>
-      <Route path="/" component={App} />
-      <Route path="/path" component={App} />
+      <Layout>
+        <Switch>
+          <Route path="/" exact component={Welcome} />
+          <Route path="/signup" component={SignUp} />
+        </Switch>
+      </Layout>
     </BrowserRouter>
   </Root>,
   document.getElementById("root")

@@ -1,6 +1,11 @@
 import axios from "axios";
 
-import { SAVE_COMMENT, FETCH_COMMENTS, AUTH_USER } from "actions/types";
+import {
+  SAVE_COMMENT,
+  FETCH_COMMENTS,
+  AUTH_USER,
+  AUTH_ERROR
+} from "actions/types";
 
 export function saveComment(comment) {
   return {
@@ -18,6 +23,14 @@ export function fetchComments() {
   };
 }
 
-export const signUp = ({ email, password }) => dispatch => {
-  dispatch({ type: AUTH_USER });
+export const signup = (formProps, callback) => async dispatch => {
+  try {
+    callback();
+    const res = await axios.post("http://localhost:3090/signup", formProps);
+
+    dispatch({ type: AUTH_USER, payload: res.data.token });
+  } catch (e) {
+    dispatch({ type: AUTH_ERROR, payload: "Email is use" });
+    console.log(e);
+  }
 };

@@ -8,8 +8,9 @@ import "../App/App.css";
 
 class SignUp extends Component {
   onSubmit = formProps => {
-    this.props.signup(formProps);
-    this.props.history.push("/feature");
+    this.props.signup(formProps, () => {
+      this.props.history.push("/feature");
+    });
   };
 
   render() {

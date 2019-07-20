@@ -6,7 +6,7 @@ import async from "middlewares/async";
 import stateValidator from "middlewares/stateValidator";
 import reducers from "reducers";
 
-export default ({ children, initialState = {} }) => {
+export default ({ children }) => {
   const composeEnhancers =
     typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
       ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
@@ -14,7 +14,7 @@ export default ({ children, initialState = {} }) => {
 
   const store = createStore(
     reducers,
-    initialState,
+    { auth: { authenticated: localStorage.getItem("token") } },
     composeEnhancers(applyMiddleware(reduxThunk, async))
   );
 

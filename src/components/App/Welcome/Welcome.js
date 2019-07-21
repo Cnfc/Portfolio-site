@@ -9,11 +9,10 @@ function Welcome() {
   return (
     <>
       <div className="header_welcome">
-        <div className="circle" />
+        <div className="header_circle" />
         <h1 className="header_welcome-name">Stanislav Dashkov</h1>
         <h2 className="gray">Frontend Web Developer</h2>
       </div>
-      <About />
       <About />
     </>
   );

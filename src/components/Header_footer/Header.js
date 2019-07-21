@@ -21,17 +21,20 @@ const Header = () => {
 
   return (
     <animated.header style={fade} className="header">
-      <div className="header_name header_name-main">
+      <div className="header_name-main header_name ">
         <Link to="/">Stanislav Dashkov</Link>
       </div>
       <Nav style={navAnimation} />
       <main>
         <Checkout isOpen={isNavOpen} />
       </main>
-      <HeaderMenu />
-      <button className="menu-button" onClick={() => setNavOpen(!isNavOpen)}>
+      <button
+        className="header_menu-button"
+        onClick={() => setNavOpen(!isNavOpen)}
+      >
         Menu
       </button>
+      <HeaderMenu />
     </animated.header>
   );
 };

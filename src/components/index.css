@@ -42,35 +42,54 @@ p {
 /* ABOUTME */
 
 /* MEDIA QUERY */
-@media (min-width: 769px) {
-  /*... правила для планшетов ...
-    выводим карточки товаров по 2 в ряд
-  */
-  .menu-button {
-    display: none;
-  }
-}
 
-@media (max-width: 768px) {
-  /*
-    ... правила для планшетов ...
-    выводим карточки товаров по 2 в ряд
-  */
-  .header_name {
-    min-width: 90px;
-  }
+@media (min-width: 768px) and (max-width: 979px) {
   .header_main-nav {
     display: none;
   }
+  .header_menu-button {
+    display: inline-block;
+  }
+  .nav-wrapper {
+    display: none;
+  }
 }
 
-@media (max-width: 376px) {
-  /*
-    ... правила для смартфонов ...
-    выводим карточки товаров по 1 в ряд
-  */
-  .header_name {
-    width: 240px;
-    min-width: 90px;
+@media (min-width: 481px) and (max-width: 767px) {
+  .header_main-nav {
+    display: none;
+  }
+  .header_menu-button {
+    display: inline-block;
+  }
+  .nav-wrapper {
+    display: none;
+  }
+  .header_name-main {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_main-nav {
+    display: none;
+  }
+  .header_menu-button {
+    display: inline-block;
+  }
+  .aboutme_main {
+    flex-direction: column;
+  }
+  .nav-wrapper {
+    display: none;
+  }
+  .header_name-main {
+    min-width: 200px;
+  }
+  .header_welcome-name {
+    font-size: 2rem;
+  }
+  .header_welcome {
+    font-size: 1rem;
   }
 }

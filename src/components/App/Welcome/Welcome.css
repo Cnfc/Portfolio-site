@@ -11,7 +11,8 @@
   font-size: 1.2rem;
 }
 
-.circle {
+.header_circle {
+  margin-top: 1em;
   width: 100px;
   height: 100px;
   background-color: silver;

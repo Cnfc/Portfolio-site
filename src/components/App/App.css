@@ -1,25 +1,4 @@
-:root {
-  --purp: #524763;
-  --darkPurp: #373142;
-  --xtraPurp: #191324;
-  --grey: #d8d8d8;
-  --teal: #82d8d8;
-  --red: #e54b4b;
-  --black: #333;
-  --black-20: #4f4f4f;
-  --black-40: #828282;
-  --black-60: #bdbdbd;
-  --white-60: #e0e0e0;
-  --white-40: #f2f2f2;
-  --white-20: #f5f4f6;
-  --white: #fff;
-}
 /* 
-.page_container {
-  margin: 15px;
-  display: flex;
-} */
-
 .signup_form {
   width: 250px;
   max-height: 300px;
@@ -171,6 +150,6 @@
 
 .full-height {
   height: 100vh;
-}
+} */
 
 /* HOOKS */

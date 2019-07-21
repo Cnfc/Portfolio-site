@@ -12,9 +12,6 @@ body {
   font-family: "Oswald", sans-serif;
   color: #404040;
   font-size: 100%;
-
-  display: flex;
-  flex-direction: column;
 }
 
 a {
@@ -28,45 +25,23 @@ h6,
 .h6 {
   font-size: 0.75rem;
 }
+
 p {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.App-header {
-  justify-content: space-between;
-  margin: 20px 10px;
-}
-
-.container {
-  width: 1100px;
-  margin: 0 auto;
-}
 .page_container {
-  min-height: 75vh;
-  /* padding-top: 50px; */
-  grid-area: pc;
+  flex-grow: 1;
+  min-height: 90vh;
 }
 
-.header {
-  grid-area: h;
-}
-.footer {
-  grid-area: f;
-}
-/* .header_welcome {
-  grid-area: hw
-} */
+/* STYLES */
 
-.main_container {
-  grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "h h h h"
-    "pc pc pc pc"
-    "f f f f";
-}
+/* ABOUTME */
+
+/* MEDIA QUERY */
 @media (min-width: 769px) {
   /*... правила для планшетов ...
     выводим карточки товаров по 2 в ряд

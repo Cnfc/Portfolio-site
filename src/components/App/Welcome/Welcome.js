@@ -14,6 +14,7 @@ function Welcome() {
         <h2 className="gray">Frontend Web Developer</h2>
       </div>
       <About />
+      <About />
     </>
   );
 }

@@ -1,18 +1,9 @@
-.header_wrapper {
-  color: #fff;
-  background-color: #5995da; /* Blue */
-  padding: 20px 0;
-  justify-content: center;
-  margin: 5% 5%;
-  padding: 0 5%;
-}
 .header {
   display: flex;
   height: 55px;
   align-items: center;
   justify-content: space-between;
   border-bottom-style: solid;
-  /* border-bottom-width: 1px; */
   border-bottom-color: rgba(0, 0, 0, 0.125);
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -47,15 +38,11 @@
   background-color: aquamarine;
 }
 
-/* FOOTER */
-
 .footer {
-  flex: 0 0 auto;
-  align-items: center;
-
+  display: flex;
   border-top-style: solid;
-  border-top-width: 1px;
   border-top-color: rgba(0, 0, 0, 0.125);
   padding-left: 5rem;
   background-color: #f5f8fa;
+  height: 50px;
 }

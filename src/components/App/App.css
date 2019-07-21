@@ -14,44 +14,15 @@
   --white-20: #f5f4f6;
   --white: #fff;
 }
-
+/* 
 .page_container {
   margin: 15px;
   display: flex;
-}
-.page_container > li {
-  margin: 0 15px;
-}
+} */
 
-.App {
-  text-align: center;
-}
-
-.logo {
-  width: 200px;
-}
-
-.header_title {
-  display: flex;
-}
-.header_title a {
-  margin: 0 10px;
-}
 .signup_form {
   width: 250px;
   max-height: 300px;
-}
-
-.App-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  padding: 0 5%;
-}
-
-.App-link {
-  color: var(--teal);
 }
 
 .nav-wrapper {
@@ -85,10 +56,6 @@
   background: transparent;
   border: none;
   z-index: 15;
-}
-
-h1 {
-  color: white;
 }
 
 .checkout {

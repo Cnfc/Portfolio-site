@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 import Nav from "./Nav";
 import Checkout from "./Checkout";
+import HeaderMenu from "./HeaderMenu";
+
+import "./HeaderStyle.css";
 
 const Header = () => {
   const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
@@ -17,25 +20,19 @@ const Header = () => {
   });
 
   return (
-    <animated.div className="App" style={fade}>
-      <header className="App-header">
-        <img className="logo" />
-        <button className="menu-button" onClick={() => setNavOpen(!isNavOpen)}>
-          Menu
-        </button>
-        <Nav style={navAnimation} />
-      </header>
+    <animated.header style={fade} className="header">
+      <div className="header_name header_name-main">
+        <Link to="/">Stanislav Dashkov</Link>
+      </div>
+      <Nav style={navAnimation} />
       <main>
         <Checkout isOpen={isNavOpen} />
       </main>
-      <nav>
-        <Link to="/">Redux Auth</Link>
-        <Link to="/signup">SignUp</Link>
-        <Link to="/signin">SignIn</Link>
-        <Link to="/signout">Sign Out</Link>
-        <Link to="/feature">Feature</Link>
-      </nav>
-    </animated.div>
+      <HeaderMenu />
+      <button className="menu-button" onClick={() => setNavOpen(!isNavOpen)}>
+        Menu
+      </button>
+    </animated.header>
   );
 };
 

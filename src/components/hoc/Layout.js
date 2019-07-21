@@ -6,7 +6,7 @@ import Footer from "components/Header_footer/Footer";
 class Layout extends Component {
   render() {
     return (
-      <div>
+      <div className="main_container">
         <Header />
         <div className="page_container">{this.props.children}</div>
         <Footer />

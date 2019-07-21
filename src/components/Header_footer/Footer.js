@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <h5>Footer</h5>
+    <div className="footer gray">
+      <h6 className="footer_name">2019 Stanislav Dashkov</h6>
     </div>
   );
 }

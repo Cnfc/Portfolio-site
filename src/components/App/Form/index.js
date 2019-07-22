@@ -2,33 +2,24 @@ import React, { Component } from "react";
 import isEmail from "validator/lib/isEmail";
 
 import "./Form.css";
+import Field from "./Field";
 
 class Form extends Component {
   state = {
     fields: {
-      name: [],
+      name: "",
       email: ""
     },
     people: [],
     fieldErrors: {}
   };
 
-  validate = person => {
-    const errors = {};
-    if (!person.name) errors.name = "Name Required";
-    if (!person.email) errors.email = "EmailRequired";
-    if (person.name && !isEmail(person.email)) errors.email = "Invalid Email";
-    return errors;
-  };
-
   onFormSubmit = e => {
     e.preventDefault();
-    const people = [...this.state.people];
-    const person = this.state.fields;
-    const fieldErrors = this.validate(person);
-    this.setState({ fieldErrors });
-    if (Object.keys(fieldErrors).length) return;
+    const people = this.state.people;
+    const person = this.state.person;
 
+    if (this.validate()) return;
     this.setState({
       people: people.concat(person),
       fields: {
@@ -38,48 +29,65 @@ class Form extends Component {
     });
   };
 
-  onInputChange = e => {
+  validate() {
+    const person = this.state.fields;
+    const fieldErrors = this.state.fieldErrors;
+    const errMessage = Object.keys(fieldErrors).filter(k => fieldErrors[k]);
+
+    if (!person.name) return true;
+    if (!person.email) return true;
+    if (errMessage.length) return true;
+    return false;
+  }
+
+  onInputChange = ({ name, value, error }) => {
     const fields = Object.assign({}, this.state.fields);
-    fields[e.target.name] = e.target.value;
-    this.setState({ fields });
+    const fieldErrors = Object.assign({}, this.state.fieldErrors);
+
+    fields[name] = value;
+    fieldErrors[name] = error;
+    this.setState({ fields, fieldErrors });
   };
 
   render() {
     return (
       <div className="form">
-        <h3>Form: Form Input</h3>
-        <h4>Sign Up Sheet</h4>
-        <h5>Names</h5>
+        <h1>Sign Up Sheet</h1>
 
         <form onSubmit={this.onFormSubmit}>
-          <input
+          <Field
             placeholder="Name"
             name="name"
             value={this.state.fields.name}
             onChange={this.onInputChange}
+            validate={val => (val ? false : "Name Required")}
           />
-          <span style={{ color: "red" }}>{this.state.fieldErrors.name}</span>
+
           <br />
 
-          <input
+          <Field
             placeholder="Email"
             name="email"
             value={this.state.fields.email}
             onChange={this.onInputChange}
+            validate={val => (isEmail(val) ? false : "Invalid Email")}
           />
-          <span style={{ color: "red" }}>{this.state.fieldErrors.email}</span>
+
           <br />
 
-          <input type="submit" />
+          <input type="submit" disabled={this.validate()} />
         </form>
-        <div>Names</div>
-        <ul>
-          {this.state.people.map(({ name, email }, i) => (
-            <li key={i}>
-              {name} {email}
-            </li>
-          ))}
-        </ul>
+
+        <div>
+          <h3>People</h3>
+          <ul>
+            {this.state.people.map(({ name, email }, i) => (
+              <li key={i}>
+                {name} ({email})
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }

@@ -13,6 +13,7 @@ import SignOut from "components/auth/SignOut";
 import SignIn from "components/auth/SignIn";
 import Portfoglio from "components/App/Portfoglio/Portfoglio";
 import Resume from "components/App/Resume/Resume";
+import Form from "components/App/Form";
 
 import "components/index.css";
 
@@ -28,6 +29,7 @@ ReactDOM.render(
           <Route path="/feature" component={Feature} />
           <Route path="/signout" component={SignOut} />
           <Route path="/signin" component={SignIn} />
+          <Route path="/form" component={Form} />
         </Switch>
       </Layout>
     </BrowserRouter>

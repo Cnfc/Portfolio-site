@@ -29,7 +29,9 @@ class Form extends Component {
       people: people.concat(person),
       fields: {
         name: "",
-        email: ""
+        email: "",
+        course: null,
+        department: null
       }
     });
   };
@@ -51,6 +53,8 @@ class Form extends Component {
 
     if (!person.name) return true;
     if (!person.email) return true;
+    if (!person.course) return true;
+    if (!person.department) return true;
     if (errMessages.length) return true;
 
     return false;
@@ -81,7 +85,14 @@ class Form extends Component {
           />
 
           <br />
-          <CourseSelect />
+
+          <CourseSelect
+            department={this.state.fields.department}
+            course={this.state.fields.course}
+            onChange={this.onInputChange}
+          />
+
+          <br />
 
           <input type="submit" disabled={this.validate()} />
         </form>
@@ -89,10 +100,8 @@ class Form extends Component {
         <div>
           <h3>People</h3>
           <ul>
-            {this.state.people.map(({ name, email }, i) => (
-              <li key={i}>
-                {name} ({email})
-              </li>
+            {this.state.people.map(({ name, email, department, course }, i) => (
+              <li key={i}>{[name, email, department, course].join(" - ")}</li>
             ))}
           </ul>
         </div>
@@ -100,5 +109,4 @@ class Form extends Component {
     );
   }
 }
-
 export default Form;

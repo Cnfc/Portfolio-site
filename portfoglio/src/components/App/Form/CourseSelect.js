@@ -16,53 +16,67 @@ class CourseSelect extends Component {
     _loading: false
   };
 
-  getDerivedStateToProps(update) {
+  getDerivedStateFromProps(update) {
     return {
       department: update.department,
       course: update.course
     };
   }
 
+  onSelectDepartment = evt => {
+    const department = evt.target.value;
+    const course = null;
+    this.setState({ department, course });
+    this.props.onChange({ name: "department", value: department });
+    this.props.onChange({ name: "course", value: course });
+
+    if (department) this.fetch(department);
+  };
+
+  onSelectCourse = evt => {
+    const course = evt.target.value;
+    this.setState({ course });
+    this.props.onChange({ name: "course", value: course });
+  };
+
   fetch = department => {
     this.setState({ _loading: true, courses: [] });
     apiClient(department).then(courses => {
-      this.setState({ _loading: false, courses });
+      this.setState({ _loading: false, courses: courses });
     });
   };
 
-  renderDepartmentSelect = e => {
+  renderDepartmentSelect = () => {
     return (
       <select
         onChange={this.onSelectDepartment}
         value={this.state.department || ""}
       >
-        <option value="">Which Department</option>
-        <option value="core">Node School: Core</option>
-        <option value="electives">Node School: Electives</option>
+        <option value="">Which department?</option>
+        <option value="core">NodeSchool: Core</option>
+        <option value="electives">NodeSchool: Electives</option>
       </select>
     );
   };
 
   renderCourseSelect = () => {
-    if (this.state._loading) return <img src="./loading.svg" alt="loading" />;
-    if (!this.state.department || this.state.courses.length) return <span />;
+    if (this.state._loading) {
+      return <img alt="loading" src="/img/loading.gif" />;
+    }
+    if (!this.state.department || !this.state.courses.length) return <span />;
 
     return (
-      <select
-        onChange={this.onSelectDepartment}
-        value={this.state.course || ""}
-      >
-        Which course?
+      <select onChange={this.onSelectCourse} value={this.state.course || ""}>
         {[
           <option value="" key="course-none">
-            Which Option
+            Which course?
           </option>,
 
-          ...this.state.courses.map((course, i) => {
+          ...this.state.courses.map((course, i) => (
             <option value={course} key={i}>
               {course}
-            </option>;
-          })
+            </option>
+          ))
         ]}
       </select>
     );

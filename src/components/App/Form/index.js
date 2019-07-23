@@ -3,23 +3,28 @@ import isEmail from "validator/lib/isEmail";
 
 import "./Form.css";
 import Field from "./Field";
+import CourseSelect from "./CourseSelect";
 
 class Form extends Component {
   state = {
     fields: {
       name: "",
-      email: ""
+      email: "",
+      course: null,
+      department: null
     },
-    people: [],
-    fieldErrors: {}
+    fieldErrors: {},
+    people: []
   };
 
-  onFormSubmit = e => {
-    e.preventDefault();
+  onFormSubmit = evt => {
     const people = this.state.people;
-    const person = this.state.person;
+    const person = this.state.fields;
+
+    evt.preventDefault();
 
     if (this.validate()) return;
+
     this.setState({
       people: people.concat(person),
       fields: {
@@ -29,24 +34,26 @@ class Form extends Component {
     });
   };
 
-  validate() {
-    const person = this.state.fields;
-    const fieldErrors = this.state.fieldErrors;
-    const errMessage = Object.keys(fieldErrors).filter(k => fieldErrors[k]);
-
-    if (!person.name) return true;
-    if (!person.email) return true;
-    if (errMessage.length) return true;
-    return false;
-  }
-
   onInputChange = ({ name, value, error }) => {
     const fields = Object.assign({}, this.state.fields);
     const fieldErrors = Object.assign({}, this.state.fieldErrors);
 
     fields[name] = value;
     fieldErrors[name] = error;
+
     this.setState({ fields, fieldErrors });
+  };
+
+  validate = () => {
+    const person = this.state.fields;
+    const fieldErrors = this.state.fieldErrors;
+    const errMessages = Object.keys(fieldErrors).filter(k => fieldErrors[k]);
+
+    if (!person.name) return true;
+    if (!person.email) return true;
+    if (errMessages.length) return true;
+
+    return false;
   };
 
   render() {
@@ -74,6 +81,7 @@ class Form extends Component {
           />
 
           <br />
+          <CourseSelect />
 
           <input type="submit" disabled={this.validate()} />
         </form>
